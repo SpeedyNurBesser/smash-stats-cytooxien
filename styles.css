@@ -1,0 +1,168 @@
+
+@font-face {
+    font-family: minecraft;
+    src: url(minecraft_font.ttf);
+}
+
+body {
+    background-color: #1a1a1a;
+    font-family: 'minecraft', monospace;
+}
+
+#container {
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    background-color: #262626;
+    border: #565656 5px solid;
+    border-radius: 6px;
+}
+
+#searchInput {
+    width: 240px;
+    height: 30px;
+    border: black 2px solid;
+    border-radius: 6px;
+    background-color: #373737;
+    color: #8b8b8b;
+    font-family: 'minecraft', monospace;
+    font-size: 16px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+#searchInput::placeholder {
+    color: #8b8b8b;
+    opacity: 0.5; /* Firefox */
+}
+
+svg {
+    fill: #8b8b8b;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+#searchButton {
+    background-color: #373737;
+    width: 36px;
+    height: 36px;
+    border: black 2px solid;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'minecraft', monospace;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: transform 0.2s;;
+}
+
+#searchButton:hover {
+    border: white 2px solid;
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+    transform: scale(1.2);
+}
+
+#timeframe-buttons-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.timeframe-button {
+    background-color: #ce2029;
+    width: 80px;
+    height: 30px;
+    border: black 2px solid;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'minecraft', monospace;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+.timeframe-button:hover {
+    border: white 2px solid;
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+    transform: scale(1.2);
+}
+
+h2 {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#playername-display {
+    color: #e17100;
+}
+
+table {
+    color: white;
+    margin: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: left;
+    width: 90%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+h1:hover{
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+    transform: scale(1.2);
+}
+
+.grey-text {
+    color: #8b8b8b;
+}
+
+#time-display {
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer {
+    display: block;
+    text-align: center;
+    color: #8b8b8b;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.cool-link {
+    color: #ce2029;
+}
+
+.cool-link:visited {
+    color: #ce2029;
+}
+
+a {
+    color:white;
+    text-decoration: none;
+}
