@@ -3,4 +3,4 @@ See all stats of a given player from the minigame Smash on the [Cytooxien.net](h
 
 [Site here](https://speedynurbesser.github.io/smash-stats-cytooxien/)
 
-![](https://github.com/user-attachments/assets/06ac53fa-02ac-4664-9be0-f07c475f0615)
+![](https://github.com/user-attachments/assets/4b7e2c27-bf42-4eaa-a69b-6e54ab260346)
