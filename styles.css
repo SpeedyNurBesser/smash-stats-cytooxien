@@ -9,7 +9,7 @@ body {
     font-family: 'minecraft', monospace;
 }
 
-#container {
+.container {
     width: 400px;
     margin: auto;
     text-align: center;
@@ -172,4 +172,16 @@ a {
     vertical-align:text-bottom;
     width: 24px;
     height: 24px;
+}
+
+.recent-playerhead-display {
+    vertical-align:text-bottom;
+    width: 16px;
+    height: 16px;
+}
+
+.recent-table-row {
+    cursor: pointer;
+    transition: background-color 0.2s;
+    height: 32px;
 }

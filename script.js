@@ -67,6 +67,11 @@ document.getElementById("searchButton").addEventListener("click", () => {
 }
 );
 
+let recent_players = [];
+
+const recent_table = document.getElementById("recent-table");
+
+
 async function fetchUserStats(username) {
     const promise = new Promise((resolve, reject) => {
         fetch("https://api.cytooxien.de/user/" + username)
@@ -140,6 +145,9 @@ async function show_stats(query=search_input.value) {
             playername_display.style.color = hex_color_code;
 
             localStorage.setItem("last_player", query);
+
+            addToRecentPlayers(data["playerInfo"]["username"], hex_color_code);
+            loadRecentTable();
         });
 }
 
@@ -213,7 +221,63 @@ function setActiveTimeframeButton() {
     }
 }
 
+function loadRecentTable() {
+    recent_table.innerHTML = "";
+
+    for (let player of recent_players) {
+        const row = document.createElement("tr");
+        row.classList.add("recent-table-row");
+
+        const cell_name = document.createElement("td");
+        cell_name.innerText = player["username"];
+        cell_name.style.color = player["color"];
+        row.appendChild(cell_name);
+
+        const cell_head = document.createElement("td");
+        const img = document.createElement("img");
+        img.src = `https://mc-heads.net/avatar/${player["username"]}/16/.png`;
+        img.classList.add("recent-playerhead-display");
+        cell_head.appendChild(img);
+        row.appendChild(cell_head);
+
+        row.addEventListener("click", () => {
+            current_timeframe = "global";
+            setActiveTimeframeButton();
+            search_input.value = player["username"];
+            show_stats();
+            window.scrollTo(0, 0, "smooth");
+        });
+
+        recent_table.appendChild(row);
+    }
+}
+
+function addToRecentPlayers(username, color) {
+    recent_players = [{
+        "username": username,
+        "color": color
+    }].concat(recent_players);
+
+    recent_players = recent_players.filter((player, index, self) =>
+        index === self.findIndex((p) => (
+            p.username === player.username
+        ))
+    );
+
+    recent_players = recent_players.slice(0, 10);
+
+    localStorage.setItem("recent_players", JSON.stringify(recent_players));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     search_input.value = localStorage.getItem("last_player") || "SpeedyOnlyBetter";
     show_stats();
+
+    recent_players = JSON.parse(localStorage.getItem("recent_players")) || [
+    {
+        "username": "SpeedyOnlyBetter",
+        "color": "#9097a0"
+    }
+];
+    loadRecentTable();
 });
