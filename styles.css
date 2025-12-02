@@ -180,8 +180,21 @@ a {
     height: 16px;
 }
 
+#recent-table {
+    margin-left: 30px;
+}
+
 .recent-table-row {
     cursor: pointer;
     transition: background-color 0.2s;
     height: 32px;
+    transition: transform 0.2s;
+}
+
+.recent-table-row:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
 }
