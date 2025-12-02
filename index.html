@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="https://cytooxien.net/_next/image?url=http%3A%2F%2Fstrapi.cytooxien.de%3A1337%2Fuploads%2Fsmash_icon_ad7716f434.png&w=256&q=75">
     <title>Cytooxien Smash Stats</title>
 </head>
 <body>
 
     <h1><a href="https://github.com/speedynurbesser/smash-stats-cytooxien">Cytooxien Smash Stats</a></h1>
 
-    <span class="footer" id="version">v1.0.0</span>
+    <span class="footer" id="version">v1.1.0</span>
 
 
     <div id="container">
@@ -24,7 +25,7 @@
         <br>
         
         <div id="results">
-            <h2>Stats of <span id="playername-display">SpeedyOnlyBetter</span></h2>
+            <h2>Stats of <span id="playername-display" style="color: #9097a0;">SpeedyOnlyBetter</span> <img id="playerhead-display" src="speedyonlybetter.png"></h2>
 
 
 
@@ -50,6 +51,22 @@
                     <td><br></td>
                 </tr>
                 <tr>
+                  <td>Kill/Death</td>
+                  <td><span id="kill-death-display">0.0</span></td>
+                </tr>
+                <tr>
+                  <td>Kill/Game</td>
+                  <td><span id="kill-game-display">0.0</span></td>
+                </tr>
+                <tr>
+                  <td>Winrate</td>
+                  <td><span id="winrate-display">0.0</span></td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+                <tr>
                   <td>Number of Deaths</td>
                   <td id="deaths-display">0</td>
                 </tr>
@@ -65,10 +82,10 @@
         </div>
 
         <div id="timeframe-buttons-container">
-            <button class="timeframe-button" id="timeframe-button-global">Global</button>
-            <button class="timeframe-button" id="timeframe-button-month">Monthly</button>
-            <button class="timeframe-button" id="timeframe-button-week">Weekly</button>
-            <button class="timeframe-button" id="timeframe-button-day">Daily</button>
+            <button class="timeframe-button" id="timeframe-button-global" style="border-color: #8b8b8b">Global</button>
+            <button class="timeframe-button" id="timeframe-button-month" style="border-color: black">Monthly</button>
+            <button class="timeframe-button" id="timeframe-button-week" style="border-color: black">Weekly</button>
+            <button class="timeframe-button" id="timeframe-button-day" style="border-color: black">Daily</button>
         </div>
 
     </div>

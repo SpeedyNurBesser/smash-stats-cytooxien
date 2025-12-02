@@ -78,8 +78,8 @@ svg {
     background-color: #ce2029;
     width: 80px;
     height: 30px;
-    border: black 2px solid;
     color: white;
+    border: black 2px solid;
     text-align: center;
     text-decoration: none;
     font-family: 'minecraft', monospace;
@@ -104,10 +104,11 @@ h2 {
     font-size: 20px;
     margin-top: 20px;
 }
-
+/*
 #playername-display {
     color: #e17100;
 }
+*/
 
 table {
     color: white;
@@ -165,4 +166,10 @@ h1:hover{
 a {
     color:white;
     text-decoration: none;
+}
+
+#playerhead-display {
+    vertical-align:text-bottom;
+    width: 24px;
+    height: 24px;
 }
